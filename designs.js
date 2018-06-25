@@ -4,9 +4,9 @@
 // When size is submitted by the user, call makeGrid()
 
 function makeGrid(width, height) {
-  for (var r = 1; width >= r; r++) {
+  for (let r = 1; width >= r; r++) {
     $("table").append("<tr></tr>");
-    for (var c = 1; height >= c; c++) {
+    for (let c = 1; height >= c; c++) {
       $("table tr:last").append("<td></td>");
       $("td").addClass("colorClass");
     }
@@ -22,8 +22,8 @@ $(document).ready(function() {
   $("#sizePicker").submit(function(event) {
     $("table tr").remove();
     event.preventDefault();
-    height = $("#inputHeight").val();
-    width = $("#inputWeight").val();
+    const height = $("#inputHeight").val();
+    const width = $("#inputWeight").val();
     color = $("#colorPicker").val();
     $('#colorPicker').change(function(){
       color = $(this).val()
