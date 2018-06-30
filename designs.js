@@ -20,8 +20,11 @@ function makeGrid(height, width) {
 $(document).ready(function() {
   $("#sizePicker").submit(function(event){//listening for the user click on submit 
     //and implementing the block of code below 
+    
     $("table tr").remove()//clear any grid on the screen;
+    
     event.preventDefault() //prevent created grid/table from disappearing after clicking the submit button;
+    
     const height = $("#inputHeight").val();
     const width = $("#inputWeight").val();
     let color = $("#colorPicker").val();
@@ -29,6 +32,7 @@ $(document).ready(function() {
       //track changes to the color bar 
       color = $(this).val() //and adjust the value of the color variable to reflect the new color selected by user
     })
+    
     makeGrid(height, width)//calling the makeGrid function to create the table when user clicks on submit;
   
     $(".colorClass").click(function(event) {
