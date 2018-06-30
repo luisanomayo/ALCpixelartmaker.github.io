@@ -18,6 +18,14 @@ h2:first-of-type {
     margin-top: 0.5em;
 }
 
+#gridName{
+    margin-bottom:0px;
+}
+
+h5{
+    margin-top:0px;
+}
+
 table,
 tr,
 td {
