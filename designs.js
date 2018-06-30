@@ -1,4 +1,4 @@
-function makeGrid(width, height) {
+function makeGrid(height, width) {
   //makeGrid function declaration to build the design canvas with dimensions width x height
   for (let r = 1; width >= r; r++) {
     //add rows
