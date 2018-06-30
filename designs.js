@@ -15,7 +15,7 @@ function makeGrid(width, height) {
 
 
 
-let height, width, color;
+//let height, width, color;
 
 $(document).ready(function() {
   $("#sizePicker").submit(function(event){//listening for the user click on submit 
