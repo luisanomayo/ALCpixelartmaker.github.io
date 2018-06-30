@@ -18,8 +18,8 @@ function makeGrid(width, height) {
 let height, width, color;
 
 $(document).ready(function() {
-  $("#sizePicker").submit(function(event)//listening for the user click on submit 
-    //and implementing the block of code below {
+  $("#sizePicker").submit(function(event){//listening for the user click on submit 
+    //and implementing the block of code below 
     $("table tr").remove()//clear any grid on the screen;
     event.preventDefault() //prevent created grid/table from disappearing after clicking the submit button;
     const height = $("#inputHeight").val();
