@@ -1,19 +1,19 @@
 function makeGrid(height, width) {
   //makeGrid function declaration to build the design canvas with dimensions width x height
-  for (let r = 1; width >= r; r++) {
-    //add rows
-    $("table").append("<tr></tr>");
-    for (let c = 1; height >= c; c++) {
-      //add columns. td here also refers to individual grid cells
-      $("table tr:last").append("<td></td>");
-      //add a class to all the cells
-      $("td").addClass("colorClass");
+  while (height > 0 && width > 0) {
+    for (let r = 1; width >= r; r++) {
+      //add rows
+      $("table").append("<tr></tr>");
+      for (let c = 1; height >= c; c++) {
+        //add columns. td here also refers to individual grid cells
+        $("table tr:last").append("<td></td>");
+        //add a class to all the cells
+        $("td").addClass("colorClass");
     }
   }
   return $("table");
 }
-
-
+}
 
 //let height, width, color;
 
@@ -23,7 +23,7 @@ $(document).ready(function() {
     
     $("table tr").remove()//clear any grid on the screen;
     
-    event.preventDefault() //prevent created grid/table from disappearing after clicking the submit button;
+    event.preventDefault() //default action of submitting the form to a server is not wanted;
     
     const height = $("#inputHeight").val();
     const width = $("#inputWeight").val();
